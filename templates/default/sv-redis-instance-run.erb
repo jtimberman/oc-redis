@@ -1,0 +1,3 @@
+#!/bin/sh
+ulimit -n <%= @options['ulimit'] %>
+chpst -u <%= @options['user'] %> redis-server /etc/redis/<%= @options['name'] %>.conf

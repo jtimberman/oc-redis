@@ -1,0 +1,27 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 512
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[test]
+      - recipe[oc-redis::default]
+      - recipe[test::lwrp]
+    attributes:
+
+  - name: ppa
+    run_list:
+      - recipe[test]
+      - recipe[oc-redis::default]
+    attributes:
+      redis:
+        include_ppa: true

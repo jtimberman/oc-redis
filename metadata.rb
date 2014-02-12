@@ -1,0 +1,8 @@
+name             'oc-redis'
+maintainer       'Chef Software, Inc.'
+maintainer_email 'cookbooks@getchef.com'
+license          'Apache 2.0'
+description      'Installs Redis and provides a resource to manage instances of Redis'
+version          '0.0.1'
+depends          'runit', '>= 1.0.0'
+depends          'apt'
